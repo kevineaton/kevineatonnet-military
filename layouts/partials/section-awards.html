@@ -1,0 +1,18 @@
+<section id="awards" class="section">
+  <p class="eyebrow">02 &#9670; Awards</p>
+  <h2>Awards</h2>
+  <ul class="award-list">
+    {{ range .Site.Data.awards.items }}
+    {{ $award := . }}
+    <li class="award-item">
+      {{ with .image }}<img class="award-image" src="{{ . | relURL }}" alt="{{ $award.name }}">{{ end }}
+      <span class="award-name">{{ .name }}</span>
+    </li>
+    {{ end }}
+  </ul>
+  {{ with .Site.Data.awards.group_image }}
+    <div style="text-align:center; margin-top:20px;" class="award-item">
+      <img class="awards-group-image" src="{{ . | relURL }}" alt="Awards and decorations" style="border:none;width:50%;">
+    </div>
+  {{ end }}
+</section>

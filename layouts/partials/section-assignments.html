@@ -1,0 +1,16 @@
+<section id="assignments" class="section">
+  <p class="eyebrow">03 &#9670; Assignments</p>
+  <h2>Assignments</h2>
+  <ul class="entry-list">
+    {{ range .Site.Data.assignments }}
+    <li class="entry">
+      <div class="entry-date">{{ .years }}</div>
+      <div class="entry-body">
+        <div class="entry-title">{{ .title }}</div>
+        <div class="entry-subtitle">{{ .unit }}{{ with .location }}, {{ . }}{{ end }}</div>
+        {{ with .details }}<p class="entry-details">{{ . }}</p>{{ end }}
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+</section>

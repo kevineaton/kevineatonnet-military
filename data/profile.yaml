@@ -1,0 +1,12 @@
+# Top-of-page identity and bio.
+# photo: drop your image at static/images/profile.jpg, then set this to "images/profile.jpg"
+photo: ""
+name: "Chaplain (Lieutenant Colonel) Kevin Howard Eaton, PhD, DMin"
+tagline: "Chaplain (56A) | US Army Reserve"
+bio: >
+  Chaplain Kevin Eaton is a Chaplain in the U.S. Army Reserve with over 20 years of experience serving Soldiers, DA Civilians, and their Families. CH Eaton focuses on
+  Crisis Intervention, Suicide Prevention, and Pastoral Counseling. CH Eaton has served at Division and Institution levels and below.
+emails: ["kevin.h.eaton.mil@army.mil"]
+links:
+  - name: "LinkedIn"
+    url: "https://www.linkedin.com/in/kevinheaton"

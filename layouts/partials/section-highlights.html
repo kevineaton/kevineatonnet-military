@@ -1,0 +1,9 @@
+<section id="highlights" class="section">
+  <p class="eyebrow">01 &#9670; Highlights</p>
+  <h2>Highlights</h2>
+  <ul class="highlight-list">
+    {{ range .Site.Data.highlights }}
+    <li class="highlight-item">{{ .text }}</li>
+    {{ end }}
+  </ul>
+</section>

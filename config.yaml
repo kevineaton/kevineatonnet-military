@@ -1,0 +1,27 @@
+baseURL: https://military.kevineaton.net
+
+languageCode: en-us
+title: "Chaplain (Lieutenant Colonel) Kevin Eaton - Military Service"
+
+languages:
+  en:
+    languageName: English
+    weight: 1
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+outputs:
+  home:
+    - HTML
+
+enableEmoji: true
+
+disableKinds:
+  - taxonomy
+  - term
+
+params:
+  description: "CH (LTC) Kevin Eaton's military service - highlights, awards, assignments, and promotions."

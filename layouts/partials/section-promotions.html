@@ -1,0 +1,14 @@
+<section id="promotions" class="section">
+  <p class="eyebrow">04 &#9670; Promotions</p>
+  <h2>Promotions</h2>
+  <ul class="entry-list">
+    {{ range .Site.Data.promotions }}
+    <li class="entry">
+      <div class="entry-date">{{ .year }}</div>
+      <div class="entry-body">
+        <div class="entry-title">{{ .rank }}</div>
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+</section>
