@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://military.kevineaton.net/sitemap.xml

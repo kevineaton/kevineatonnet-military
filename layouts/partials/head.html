@@ -3,8 +3,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Title }}</title>
   <meta name="description" content="{{ .Site.Params.description }}">
+  <link rel="canonical" href="{{ .Site.BaseURL }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kevin Eaton">
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ .Site.Params.description }}">
+  <meta property="og:url" content="{{ .Site.BaseURL }}">
+  {{ with .Site.Data.profile.photo }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="{{ .Site.Params.description }}">
+  {{ with .Site.Data.profile.photo }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
+
+  <!-- Structured data for search engines and AI agents -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kevin Eaton",
+    "url": "{{ .Site.BaseURL }}",
+    {{ with .Site.Data.profile.photo }}"image": "{{ . | absURL }}",{{ end }}
+    "description": "{{ .Site.Params.description }}",
+    "sameAs": [
+      "https://kevineaton.net",
+      "https://tech.kevineaton.net",
+      "https://academia.kevineaton.net",
+      "https://martialarts.kevineaton.net",
+      "https://www.linkedin.com/in/kevinheaton",
+      "https://github.com/kevineaton",
+      "https://mastodon.social/@kevineaton"
+    ]
+  }
+  </script>
 </head>
